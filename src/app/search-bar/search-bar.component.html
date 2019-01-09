@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+  <div class="left">
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+  </div>
+
+  <mat-form-field>
+    <mat-label></mat-label>
+    <input matInput #filter (keyup)="applyFilter($event.target.value)" placeholder="搜索">
+  </mat-form-field>
+
+  <div class="right">
+    <button mat-icon-button class="search-button" (click)="clearFilter()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+
+</mat-toolbar>
+
+<div class="articles-list">
+  <app-articles></app-articles>
+</div>
+
+<!--<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">-->
+
+  <!--&lt;!&ndash; Position Column &ndash;&gt;-->
+  <!--<ng-container matColumnDef="id">-->
+    <!--<th mat-header-cell *matHeaderCellDef> ID. </th>-->
+    <!--<td mat-cell *matCellDef="let element"> {{element.id}} </td>-->
+  <!--</ng-container>-->
+
+  <!--&lt;!&ndash; Name Column &ndash;&gt;-->
+  <!--<ng-container matColumnDef="flag">-->
+    <!--<th mat-header-cell *matHeaderCellDef> flag </th>-->
+    <!--<td mat-cell *matCellDef="let element"> {{element.flag}} </td>-->
+  <!--</ng-container>-->
+
+  <!--&lt;!&ndash; Weight Column &ndash;&gt;-->
+  <!--<ng-container matColumnDef="summary">-->
+    <!--<th mat-header-cell *matHeaderCellDef> summary </th>-->
+    <!--<td mat-cell *matCellDef="let element"> {{element.summary}} </td>-->
+  <!--</ng-container>-->
+
+  <!--&lt;!&ndash; Symbol Column &ndash;&gt;-->
+  <!--<ng-container matColumnDef="updateTime">-->
+    <!--<th mat-header-cell *matHeaderCellDef> updateTime </th>-->
+    <!--<td mat-cell *matCellDef="let element"> {{element.updateTime}} </td>-->
+  <!--</ng-container>-->
+
+  <!--<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+  <!--<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
+<!--</table>-->

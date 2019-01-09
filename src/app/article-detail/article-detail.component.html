@@ -1,0 +1,52 @@
+<div style="display: flex;flex-direction: column;height: 100%">
+  <div>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+
+      <span class="top-font">{{article.lastModifiedDate||article.createDate}}</span>
+
+      <div class="right">
+        <button mat-button (click)="setArticle(title.value,text.value)" class="top-font">保存</button>
+
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled>
+            <span>提醒</span>
+          </button>
+          <button mat-menu-item disabled>
+            <span>分享</span>
+          </button>
+          <button mat-menu-item disabled>
+            <span>加密</span>
+          </button>
+          <button mat-menu-item disabled>
+            <span>顶置</span>
+          </button>
+          <button mat-menu-item (click)="deleteArticle()">
+            <span>删除</span>
+          </button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+  </div>
+
+  <div class="article-title">
+    <mat-form-field [style.fontSize]="14">
+      <mat-label>{{article.title===""?"请输入标题":""}}</mat-label>
+      <!--<input matInput #title placeholder="请输入标题"-->
+             <!--value="{{article.title}}"-->
+             <!--(keyup)="sliceTitle(title.value)">-->
+      <input matInput #title placeholder="请输入标题"
+             [ngModel]="article.title | lengthLimit:10"
+             (ngModelChange)="sliceTitle(title.value)">
+    </mat-form-field>
+  </div>
+  <textarea #text placeholder="请输入内容">{{article.text}}</textarea>
+</div>
+
+
+

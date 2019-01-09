@@ -1,0 +1,36 @@
+.mat-toolbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+.mat-toolbar.mat-primary {
+  background: -webkit-linear-gradient(#1d61bf, #4e8bef);
+}
+
+.articles-list {
+  padding-top: 56px;
+}
+
+.add-button {
+  position: fixed;
+  width: 66px;
+  height: 66px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.add-button .mat-icon {
+  line-height: 66px;
+  width: 66px;
+  height: 66px;
+  font-size: 66px;
+  color: #1d61bf;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: darkgrey 5px 5px 20px 1px;
+}

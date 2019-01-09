@@ -1,0 +1,25 @@
+<ul>
+  <li *ngFor="let article of articleService.getDisplayArticles()">
+    <a *ngIf="!articleService.isBatch" routerLink="/article/{{article.createTime}}">
+      <mat-icon>fiber_manual_record</mat-icon>
+      <div class="text">
+        <span class="title">{{article.title}}</span>
+        <span class="summary">{{article.summary}}</span>
+      </div>
+    </a>
+
+    <a *ngIf="articleService.isBatch">
+      <mat-checkbox *ngIf="articleService.isBatch"
+                    [class]="articleService.isSelected(article.createTime)?'checkbox-checked':''"
+                    [ngModel]="articleService.isSelected(article.createTime)"
+                    (change)="articleService.selectItem(article.createTime)">
+      </mat-checkbox>
+      <div class="text" (click)="articleService.selectItem(article.createTime)">
+        <span class="title">{{article.title}}</span>
+        <span class="summary">{{article.summary}}</span>
+      </div>
+    </a>
+
+    <span class="date">{{article.createDate.split(" ")[0]}}</span>
+  </li>
+</ul>

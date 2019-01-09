@@ -1,0 +1,39 @@
+.mat-toolbar.mat-primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: -webkit-linear-gradient(#1d61bf, #4e8bef);
+}
+
+.top-font{
+  font-size: 18px;
+}
+
+.article-title {
+  height: 60px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 16px;
+}
+
+.article-title input{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "微软雅黑";
+}
+
+.mat-form-field {
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  height: 100%;
+  padding: 16px;
+  outline: none;
+  border: none;
+  font-size: inherit;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}

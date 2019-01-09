@@ -1,0 +1,21 @@
+.mat-toolbar.mat-primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: -webkit-linear-gradient(#1d61bf, #4e8bef);
+  position: fixed;
+  top: 0;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.articles-list {
+  padding-top: 56px;
+}

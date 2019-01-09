@@ -1,0 +1,26 @@
+.mat-toolbar.mat-primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: -webkit-linear-gradient(#1d61bf, #4e8bef);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.top-font{
+  font-size: 18px;
+}
+
+.articles-list {
+  padding: 56px 0;
+}
+
+.mat-toolbar.bottom{
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+}

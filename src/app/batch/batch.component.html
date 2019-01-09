@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <div class="left">
+    <button class="top-font" mat-button (click)="articleService.selectAll()">
+      {{articleService.isAllSelect?"取消全选":"全选"}}
+    </button>
+  </div>
+
+  <span>已经选择{{articleService.selected.length}}条</span>
+
+  <div class="right">
+    <button class="top-font" mat-button (click)="goBack()">
+      取消
+    </button>
+  </div>
+
+</mat-toolbar>
+
+<div class="articles-list">
+  <app-articles></app-articles>
+</div>
+
+<mat-toolbar class="bottom">
+  <button mat-icon-button disabled>
+    <mat-icon>access_alarm</mat-icon>
+    <span>提醒</span>
+  </button>
+  <button mat-icon-button disabled>
+    <mat-icon>lock</mat-icon>
+    <span>加密</span>
+  </button>
+  <button mat-icon-button (click)="deleteArticles()">
+    <mat-icon>delete_forever</mat-icon>
+    <span>删除</span>
+  </button>
+  <button mat-icon-button disabled>
+    <mat-icon>share</mat-icon>
+    <span>分享</span>
+  </button>
+
+</mat-toolbar>

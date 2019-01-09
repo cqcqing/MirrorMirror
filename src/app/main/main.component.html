@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+  <div class="left">
+    <span>魔镜</span>
+    <button mat-icon-button [matMenuTriggerFor]="main">
+      <mat-icon>reorder</mat-icon>
+    </button>
+    <mat-menu #main="matMenu">
+      <button mat-menu-item>
+        <mat-icon>fiber_manual_record</mat-icon>
+        <span>全部</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>fiber_manual_record</mat-icon>
+        <span>工作</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>fiber_manual_record</mat-icon>
+        <span>生活</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>fiber_manual_record</mat-icon>
+        <span>未分类</span>
+      </button>
+    </mat-menu>
+  </div>
+
+  <div class="right">
+    <button mat-icon-button class="search-button" (click)="toSearchTool()">
+      <mat-icon>search</mat-icon>
+    </button>
+
+    <button mat-icon-button [matMenuTriggerFor]="more">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #more="matMenu">
+      <button mat-menu-item (click)="toBatchTool()">
+        <span>编辑</span>
+      </button>
+      <button mat-menu-item disabled>
+        <span>排序</span>
+      </button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
+
+<div class="articles-list">
+  <app-articles></app-articles>
+</div>
+
+<button mat-icon-button class="add-button" (click)="newArticle()">
+  <mat-icon>add_circle_outline</mat-icon>
+</button>
